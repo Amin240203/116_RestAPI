@@ -1,5 +1,6 @@
 package com.example.databaseapi.ui
 
+import android.icu.text.CaseMap.Title
 import android.os.Build
 import androidx.annotation.RequiresExtension
 import androidx.compose.foundation.layout.fillMaxSize
@@ -47,6 +48,15 @@ fun KontakApp(
 
     }
 }
+
+@Composable
+fun TopAppBarKontak(
+    title: String,
+    canNavigateBack: Boolean,
+    modifier: Modifier = Modifier,
+    scrollBehavior: TopAppBarScrollBehavior? = null,
+    navigateUp: () -> Unit = {}
+)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
