@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 class InsertViewModel(private val kontakRepositori: KontakRepositori) : ViewModel(){
     var insertKontakState by mutableStateOf(InsertUIState())
         private set
-    fun updateInsertKontakState(insertUiEvent: InsertUievent){
+    fun updateInsertKontakState(insertUiEvent: InsertUiEvent){
         insertKontakState = InsertUIState(insertUiEvent)
     }
 
@@ -25,4 +25,15 @@ class InsertViewModel(private val kontakRepositori: KontakRepositori) : ViewMode
         }
     }
 }
+
+data class InsertUIState(
+    val insertUiEvent: InsertUiEvent = InsertUiEvent(),
+)
+
+data class InsertUiEvent(
+    val id: Int = 0,
+    val nama: String = "",
+    val email: String = "",
+    val nohp: String = "",
+)
 
