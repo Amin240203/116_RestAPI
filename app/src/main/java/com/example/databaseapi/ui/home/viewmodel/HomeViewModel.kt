@@ -43,4 +43,10 @@ class HomeViewModel (private val kontakRepositori: KontakRepositori): ViewModel(
         }
     }
 
+    fun deleteKontak(id: Int){
+
+            }
+        }
+    }
+
 }
